@@ -24,7 +24,7 @@
 				frame.height = window.innerHeight;
 			});
 			
-			window.resize();
+			window.dispatchEvent(new CustomEvent("resize"));
 		</script>
 	</body>
 </html>
