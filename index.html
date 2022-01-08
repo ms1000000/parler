@@ -6,7 +6,8 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<style>
 			body {
-				margin: 0px;	
+				margin: 0px;
+				overflow: hidden;
 			}
 			iframe {
 				border: 0px;	
@@ -17,9 +18,11 @@
 		<iframe src="https://parler.com"></iframe>
 		
 		<script>
-			const frame = document.querySelector("iframe");
-			frame.width = window.innerWidth;
-			frame.height = window.innerHeight;
+			window.addEventListener("resize", () => {
+				const frame = document.querySelector("iframe");
+				frame.width = window.innerWidth;
+				frame.height = window.innerHeight;
+			});
 		</script>
 	</body>
 </html>
